@@ -1,0 +1,43 @@
+{
+  materials: [
+    {
+      name: '1',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.1961,
+            0.1961,
+            0.1961,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/models/desk/desk.obj',
+    name: 'desk',
+    recenter: 'root',
+    scale: 0.0016670000000000001,
+  },
+  version: '0.54:2',
+}
