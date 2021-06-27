@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/sampledata/models/bed/bed_type.mtl" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/sampledata/models/chair/chair_type.mtl" charset="UTF-8" />
+  </component>
+</project>
