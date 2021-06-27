@@ -1,0 +1,2 @@
+rootProject.name = "FurnitureAR"
+include ':app'
