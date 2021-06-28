@@ -5,18 +5,23 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.furniturear.R
+import com.google.ar.sceneform.AnchorNode
+import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.rendering.ModelRenderable
+import com.google.ar.sceneform.ux.ArFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment(R.layout.fragment_main), View.OnClickListener {
 
     lateinit var arrayView: Array<View>
+    lateinit var arFragment: ArFragment
     lateinit var bedRenderable: ModelRenderable
     lateinit var chairRenderable: ModelRenderable
     lateinit var deskRenderable: ModelRenderable
     lateinit var diningTableRenderable: ModelRenderable
     lateinit var drawerRenderable: ModelRenderable
     lateinit var sofaRenderable: ModelRenderable
+    internal var selected = 1
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -24,6 +29,18 @@ class MainFragment : Fragment(R.layout.fragment_main), View.OnClickListener {
         setupArray()
         setupClickListener()
         loadModel()
+
+        arFragment = childFragmentManager.findFragmentById(R.id.scene_form_fragment) as ArFragment
+        arFragment.setOnTapArPlaneListener { hitResult, _, _ ->
+            val anchorNode = AnchorNode(
+                hitResult.createAnchor()
+            )
+
+            anchorNode.setParent(arFragment.arSceneView.scene)
+            val bed = Node()
+            bed.renderable = bedRenderable
+            bed.setParent(anchorNode)
+        }
 
     }
 
