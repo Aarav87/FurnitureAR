@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <fragment
+        android:id="@+id/scene_form_fragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bed"
+                android:contentDescription="@string/bed"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/bed" />
+
+            <ImageView
+                android:id="@+id/chair"
+                android:contentDescription="@string/chair"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/chair" />
+
+            <ImageView
+                android:id="@+id/desk"
+                android:contentDescription="@string/desk"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/desk" />
+
+            <ImageView
+                android:id="@+id/diningTable"
+                android:contentDescription="@string/diningTable"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/dining_table" />
+
+            <ImageView
+                android:id="@+id/drawer"
+                android:contentDescription="@string/drawer"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/drawer" />
+
+            <ImageView
+                android:id="@+id/sofa"
+                android:contentDescription="@string/sofa"
+                android:layout_width="100dp"
+                android:layout_height="79dp"
+                android:src="@drawable/sofa" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</FrameLayout>

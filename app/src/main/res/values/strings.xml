@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FurnitureAR</string>
+    <string name="bed">bed</string>
+    <string name="chair">chair</string>
+    <string name="desk">desk</string>
+    <string name="diningTable">diningTable</string>
+    <string name="drawer">drawer</string>
+    <string name="sofa">sofa</string>
 </resources>
