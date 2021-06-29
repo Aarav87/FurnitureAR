@@ -80,11 +80,37 @@ class MainFragment : Fragment(R.layout.fragment_main), View.OnClickListener {
             )
 
             anchorNode.setParent(arFragment.arSceneView.scene)
+            createModel(anchorNode, selected)
+        }
+
+    }
+
+    private fun createModel(anchorNode: AnchorNode, selected: Int) {
+        if (selected == 1) {
             val bed = Node()
             bed.renderable = bedRenderable
             bed.setParent(anchorNode)
+        } else if (selected == 2) {
+            val chair = Node()
+            chair.renderable = chairRenderable
+            chair.setParent(anchorNode)
+        } else if (selected == 3) {
+            val desk = Node()
+            desk.renderable = deskRenderable
+            desk.setParent(anchorNode)
+        } else if (selected == 4) {
+            val diningTable = Node()
+            diningTable.renderable = diningTableRenderable
+            diningTable.setParent(anchorNode)
+        } else if (selected == 5) {
+            val drawer = Node()
+            drawer.renderable = drawerRenderable
+            drawer.setParent(anchorNode)
+        } else if (selected == 6) {
+            val sofa = Node()
+            sofa.renderable = sofaRenderable
+            sofa.setParent(anchorNode)
         }
-
     }
 
     private fun loadModel() {
