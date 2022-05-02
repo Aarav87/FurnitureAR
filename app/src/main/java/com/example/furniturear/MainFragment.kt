@@ -1,10 +1,9 @@
-package com.example.furniturear.helpers
+package com.example.furniturear
 
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.furniturear.R
 import com.google.ar.sceneform.AnchorNode
 import com.google.ar.sceneform.Node
 import android.graphics.Color
